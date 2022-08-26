@@ -1,4 +1,34 @@
 <?xml version="1.0"?>
 <routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+    <route url="/V1/productresponsibleuser/user" method="POST">
+        <service class="Aiti\ProductResponsibleUserApi\Api\ProductResponsibleUserRepositoryInterface" method="save"/>
+        <resources>
+            <resource ref="Aiti_ProductResponsibleUser::user_save"/>
+        </resources>
+    </route>
+    <route url="/V1/productresponsibleuser/user/search/:searchCriteria" method="GET">
+        <service class="Aiti\ProductResponsibleUserApi\Api\ProductResponsibleUserRepositoryInterface" method="getList"/>
+        <resources>
+            <resource ref="Aiti_ProductResponsibleUser::user_view"/>
+        </resources>
+    </route>
+    <route url="/V1/productresponsibleuser/user/:userId" method="GET">
+        <service class="Aiti\ProductResponsibleUserApi\Api\ProductResponsibleUserRepositoryInterface" method="get"/>
+        <resources>
+            <resource ref="Aiti_ProductResponsibleUser::user_view"/>
+        </resources>
+    </route>
+    <route url="/V1/productresponsibleuser/user/:userId" method="PUT">
+        <service class="Aiti\ProductResponsibleUserApi\Api\ProductResponsibleUserRepositoryInterface" method="save"/>
+        <resources>
+            <resource ref="Aiti_ProductResponsibleUser::user_update"/>
+        </resources>
+    </route>
+    <route url="/V1/productresponsibleuser/user/:userId" method="DELETE">
+        <service class="Aiti\ProductResponsibleUserApi\Api\ProductResponsibleUserRepositoryInterface" method="deleteById"/>
+        <resources>
+            <resource ref="Aiti_ProductResponsibleUser::user_delete"/>
+        </resources>
+    </route>
 </routes>
