@@ -1,0 +1,22 @@
+{
+    "name": "aiti/module-productresponsibleuserwebapi",
+    "description": "Product Responsible User Web REST Api",
+    "type": "magento2-module",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "lukyz",
+            "email": "lukas.cesal@aiti.cz"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Aiti\\ProductResponsibleUserWebApi\\": ""
+        }
+    }
+}
